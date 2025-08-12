@@ -2,6 +2,9 @@
 
 Welcome to the Interactive Subword Tokenizer project! This tool allows users to explore subword tokenization interactively. It showcases the tokenization process, vocabulary management, and encoding/decoding of text using a simple web-based interface.
 
+<img width="1212" height="1237" alt="image" src="https://github.com/user-attachments/assets/9a223fcb-9368-488d-8494-f62d1ab281d3" />
+
+
 ## Features
 
 - **Interactive Tokenization**: Type text and see it tokenized in real-time.
@@ -55,3 +58,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 
 Feel free to explore and modify the code to suit your needs. Enjoy tokenizing!
+
