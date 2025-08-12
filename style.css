@@ -1,0 +1,55 @@
+    /* Custom font and minor style adjustments */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        .output-box {
+            min-height: 80px;
+            word-wrap: break-word;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .subword-token {
+            background-color: #dbeafe; /* blue-200 */
+            color: #1e40af; /* blue-800 */
+        }
+        .number-token {
+            background-color: #dcfce7; /* green-200 */
+            color: #166534; /* green-800 */
+        }
+        .vocab-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .vocab-item:nth-child(odd) {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb; /* blue-600 */
+        }
+        .btn-secondary {
+            background-color: #ef4444; /* red-500 */
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #dc2626; /* red-600 */
+        }
