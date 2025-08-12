@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Subword Tokenizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Advanced Subword Tokenizer</h1>
+        <p class="text-center text-gray-500 mb-6">This tokenizer breaks words into their largest known sub-parts, similar to modern NLP models.</p>
+
+        <!-- Preset Actions -->
+        <div class="bg-gray-50 p-4 rounded-lg mb-6 flex flex-col sm:flex-row items-center gap-4">
+             <div class="flex-grow w-full sm:w-auto">
+                <label for="preset-select" class="block text-sm font-medium text-gray-600 mb-1">Load a Preset Vocabulary:</label>
+                <select id="preset-select" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500">
+                    <option value="nursery">Nursery Rhyme</option>
+                    <option value="quote">Famous Quote</option>
+                    <option value="tongue_twister">Tongue Twister</option>
+                </select>
+             </div>
+             <div class="flex gap-4 mt-2 sm:mt-0 self-end">
+                <button id="load-preset-btn" class="btn btn-primary">Load</button>
+                <button id="reset-btn" class="btn btn-secondary">Reset</button>
+             </div>
+        </div>
+
+        <!-- Encoder Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <h2 class="text-xl font-semibold text-gray-700">Encoder</h2>
+                <div>
+                    <label for="encoder-input" class="block text-sm font-medium text-gray-600 mb-1">Enter Text to Encode:</label>
+                    <textarea id="encoder-input" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Try words like 'predictable' or 'unbelievable'..."></textarea>
+                </div>
+
+                <div>
+                    <h3 class="text-md font-semibold text-gray-600 mb-1">Subword Tokens:</h3>
+                    <div id="subword-tokens-output" class="output-box p-3 bg-gray-50 border border-gray-200 rounded-lg"></div>
+                </div>
+
+                <div>
+                    <h3 class="text-md font-semibold text-gray-600 mb-1">Numerical Tokens:</h3>
+                    <div id="number-tokens-output" class="output-box p-3 bg-gray-50 border border-gray-200 rounded-lg"></div>
+                </div>
+            </div>
+
+            <!-- Vocabulary Section -->
+            <div class="space-y-4">
+                <h2 class="text-xl font-semibold text-gray-700">Live Vocabulary</h2>
+                <div id="vocabulary-output" class="h-80 overflow-y-auto p-3 bg-gray-50 border border-gray-200 rounded-lg">
+                    <!-- Vocabulary will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-8 border-gray-300">
+
+        <!-- Decoder Section -->
+        <div class="space-y-4">
+            <h2 class="text-xl font-semibold text-gray-700">Decoder</h2>
+            <div>
+                <label for="decoder-input" class="block text-sm font-medium text-gray-600 mb-1">Enter Numerical Tokens (comma-separated):</label>
+                <input type="text" id="decoder-input" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Try the numbers from above...">
+            </div>
+            <div>
+                <h3 class="text-md font-semibold text-gray-600 mb-1">Decoded Text:</h3>
+                <div id="decoded-text-output" class="output-box p-3 bg-gray-50 border border-gray-200 rounded-lg"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
