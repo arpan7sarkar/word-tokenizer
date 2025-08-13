@@ -1,4 +1,3 @@
-        // --- The Subword Tokenizer Class ---
         class SubwordTokenizer {
             constructor() {
                 this.vocab = new Map();
@@ -167,4 +166,5 @@
             encoderInput.value = '';
             subwordTokensOutput.innerHTML = '';
             numberTokensOutput.innerHTML = '';
+
         });
